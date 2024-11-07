@@ -1,0 +1,15 @@
+%{
+%}
+%%
+[a|e|i|o|u|A|E|I|O|U]+[a-z A-Z]*  {printf("\n Vowels %s\n",yytext);}
+ [A-Za-z]+ {printf("\n invalid  %s\n",yytext);}
+%%
+int yywrap(){}
+int main()
+{
+printf("\n Enter string:");
+yylex();
+}
+
+
+

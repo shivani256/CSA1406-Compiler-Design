@@ -1,0 +1,12 @@
+%{
+%}
+%%
+[if|else|while|return|for|int|main]+ {printf("\n Keywords\n",yytext);}
+.+ {printf("\n Identifiers \n",yytext);}
+%%
+int yywrap(){}
+int main()
+{
+printf("\n Enter the input:");
+yylex();
+}
